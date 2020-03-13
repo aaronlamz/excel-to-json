@@ -4,7 +4,7 @@ const http = require("http");
 const child_process = require("child_process");
 const XLSX = require("xlsx");
 
-const workbook = XLSX.readFile("./files/list.xlsx");
+const workbook = XLSX.readFile("./example/list.xlsx");
 const defaultMode = "i18n";
 const sheet_name_list = workbook.SheetNames;
 const workbookH5 = workbook.Sheets[sheet_name_list[0]];
@@ -30,12 +30,12 @@ const mode_i18n = {
   }
 };
 
-let columnKeyZhCHT = "A";
-let columnKeyEn = "B";
-let columnKeyZhCHS = "C";
-let columnKey = "D";
-let beginRowNum = 111;
-let endRowNum = 130;
+let columnKeyZhCHT = "A"; // 默认繁体列表序号
+let columnKeyEn = "B"; // 默认繁体列表序号
+let columnKeyZhCHS = "C"; // 默认繁体列表序号
+let columnKey = "D"; // 自定义Key列表序号
+let beginRowNum = 1; // 默认开始行号
+let endRowNum = 10; // 默认结束行号
 
 console.log(workbookH5);
 if (mode === "i18n") {
@@ -55,20 +55,8 @@ if (mode === "i18n") {
     }
   });
   console.log(mode_i18n);
-
-  // fs.writeFile(
-  //   "output_xlsx.js",
-  //   JSON.stringify(mode_i18n, null, " "),
-  //   "utf8",
-  //   function(error) {
-  //     if (error) {
-  //       console.log(error);
-  //       return false;
-  //     }
-  //     console.log("写入成功");
-  //   }
-  // );
 }
+
 http
   .createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "text/plain;charset=utf-8" });
