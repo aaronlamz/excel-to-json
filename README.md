@@ -1,5 +1,5 @@
 ## parse-excel-cli
-> 一个简单的excel解析工具
+> A simple excel parsing CLI
 
 ### Installation
 Using npm:
