@@ -1,7 +1,7 @@
 {
-  "name": "parse-excel",
+  "name": "parse-excel-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "A parse-excel-cli ",
   "main": "index.js",
   "bin": {
     "xcli": "./bin/index.js"
@@ -9,8 +9,6 @@
   "dependencies": {
     "commander": "^4.1.1",
     "inquirer": "^7.1.0",
-    "ora": "^4.0.3",
-    "shelljs": "^0.8.3",
     "xlsx": "^0.15.5"
   },
   "devDependencies": {},
