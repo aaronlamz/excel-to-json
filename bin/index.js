@@ -25,7 +25,6 @@ program.arguments("<run>").action(function(cmd) {
   ];
   if (cmd === "run") {
     inquirer.prompt(questions).then(options => {
-      console.log(options);
       run(options);
     });
   } else {
