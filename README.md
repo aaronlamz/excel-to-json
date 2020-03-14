@@ -3,9 +3,12 @@
 
 ### Installation
 Using npm:
-> $ npm i -g parse-excel-cli
-
+```
+$ npm i -g parse-excel-cli
+```
 Usage
-> xcli run
+```
+xcli run
+```
 
 
