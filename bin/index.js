@@ -9,7 +9,7 @@ const run = require("../index.js");
 let beginRowNum = 1; // 默认开始行号
 let endRowNum = 10; // 默认结束行
 
-program.version("1.0.0").usage("<run>");
+program.version("1.0.4").usage("<run>");
 program.arguments("<run>").action(function(cmd) {
   var questions = [
     {
@@ -31,7 +31,6 @@ program.arguments("<run>").action(function(cmd) {
   ];
   if (cmd === "run") {
     inquirer.prompt(questions).then(options => {
-      console.log(options)
       run(options);
     });
   } else {
