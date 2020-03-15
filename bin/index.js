@@ -13,6 +13,12 @@ program.version("1.0.0").usage("<run>");
 program.arguments("<run>").action(function(cmd) {
   var questions = [
     {
+      type: "list",
+      name: "mode",
+      message: "请选择输出的数据格式",
+      choices: ["i18n", "array"]
+    },
+    {
       type: "input",
       name: "beginRowNum",
       message: "请确保当前目录是否有excel文件，请输入开始的行号(默认为1):"
@@ -25,6 +31,7 @@ program.arguments("<run>").action(function(cmd) {
   ];
   if (cmd === "run") {
     inquirer.prompt(questions).then(options => {
+      console.log(options)
       run(options);
     });
   } else {
