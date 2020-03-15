@@ -40,7 +40,6 @@ function run(options) {
       }
     }
   });
-  console.log(workbookMap);
   Object.keys(workbookMap).forEach(rowNum => {
     let customKey = workbookMap[rowNum][`${columnCustomKey}${rowNum}`]; // 自定义KEY
     let zhCHSKey = customKey || `${columnKeyZhCHS}${rowNum}`;
@@ -62,8 +61,7 @@ function run(options) {
   } else {
     result = mode_array;
   }
-  console.log(mode_i18n);
-  console.log(mode_array);
+  console.log(result);
 
   const port = 8881;
   http
