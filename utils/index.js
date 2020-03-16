@@ -1,4 +1,5 @@
 const child_process = require("child_process");
+const open = require("open");
 const utils = {
   openBrowse: url => {
     if (!url) return;
@@ -9,7 +10,7 @@ const utils = {
     } else if (process.platform === "darwin") {
       cmd = "open";
     }
-    child_process.exec(`${cmd} ${url}`);
+    open(`${url}`);
   }
 };
 

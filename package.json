@@ -9,13 +9,17 @@
   "dependencies": {
     "commander": "^4.1.1",
     "inquirer": "^7.1.0",
+    "open": "^7.0.3",
     "xlsx": "^0.15.5"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["excel-parse-json","node"],
+  "keywords": [
+    "excel-parse-json",
+    "node"
+  ],
   "author": "Aaron",
   "license": "MIT"
 }
