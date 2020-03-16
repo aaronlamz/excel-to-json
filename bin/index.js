@@ -9,7 +9,7 @@ const run = require("../index.js");
 let beginRowNum = 1; // 默认开始行号
 let endRowNum = 10; // 默认结束行
 
-program.version("1.0.5").usage("<run>");
+program.version("1.0.6").usage("<run>");
 program.arguments("<run>").action(function(cmd) {
   var questions = [
     {
