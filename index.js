@@ -10,7 +10,7 @@ function run(options) {
   const sheet_name_list = workbook.SheetNames;
   const workbookH5 = workbook.Sheets[sheet_name_list[0]];
 
-  let mode = options.mode || pdefaultMode;
+  let mode = options.mode || defaultMode;
   const mode_i18n = {
     i18n: {
       zhCHT: {},
