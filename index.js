@@ -8,7 +8,7 @@ function run(options) {
   const workbook = XLSX.readFile("./list.xlsx");
   const defaultMode = "i18n";
   const sheet_name_list = workbook.SheetNames;
-  const workbookH5 = workbook.Sheets[sheet_name_list[0]];
+  const workbookH5 = workbook.Sheets[sheet_name_list[options.column]];
 
   let mode = options.mode || defaultMode;
   const mode_i18n = {
