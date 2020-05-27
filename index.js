@@ -15,8 +15,8 @@ function run(options) {
     i18n: {
       zhCHT: {},
       zhCHS: {},
-      en: {}
-    }
+      en: {},
+    },
   };
   const mode_array = [];
 
@@ -28,7 +28,7 @@ function run(options) {
   let endRowNum = +options.endRowNum || 10; // 默认结束行
 
   let workbookMap = {};
-  Object.keys(workbookH5).forEach(key => {
+  Object.keys(workbookH5).forEach((key) => {
     if (key.indexOf("!") === -1) {
       let rowNum = key.match(/\d+/) ? key.match(/\d+/)[0] : 0;
       if (rowNum < beginRowNum || rowNum > endRowNum) return;
@@ -40,7 +40,7 @@ function run(options) {
       }
     }
   });
-  Object.keys(workbookMap).forEach(rowNum => {
+  Object.keys(workbookMap).forEach((rowNum) => {
     let customKey = workbookMap[rowNum][`${columnCustomKey}${rowNum}`]; // 自定义KEY
     let zhCHSKey = customKey || `${columnKeyZhCHS}${rowNum}`;
     let zhCHTKey = customKey || `${columnKeyZhCHT}${rowNum}`;
@@ -51,7 +51,7 @@ function run(options) {
     mode_array.push([
       `${workbookMap[rowNum][zhCHSKey]}`,
       `${workbookMap[rowNum][zhCHTKey]}`,
-      `${workbookMap[rowNum][enKey]}`
+      `${workbookMap[rowNum][enKey]}`,
     ]);
   });
 

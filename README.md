@@ -6,7 +6,8 @@ Using npm:
 ```
 $ npm install -g parse-excel-cli
 ```
-Usage
+
+### Usage
 ```
 xcli run
 ```
