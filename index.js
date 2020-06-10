@@ -19,11 +19,20 @@ function run(options) {
     },
   };
   const mode_array = [];
+  console.log(options);
+  let columnKeyZhCHT = options.columnKeyZhCHT
+    ? options.columnKeyZhCHT.toUpperCase()
+    : "A"; // 默认繁体列表序号
+  let columnKeyEn = options.columnKeyEn
+    ? options.columnKeyEn.toUpperCase()
+    : "B"; // 默认繁体列表序号
+  let columnKeyZhCHS = options.columnKeyZhCHS
+    ? options.columnKeyZhCHS.toUpperCase()
+    : "C"; // 默认繁体列表序号
+  let columnCustomKey = options.columnCustomKey
+    ? options.columnCustomKey.toUpperCase()
+    : "D"; // 自定义Key列表序号
 
-  let columnKeyZhCHT = "A"; // 默认繁体列表序号
-  let columnKeyEn = "B"; // 默认繁体列表序号
-  let columnKeyZhCHS = "C"; // 默认繁体列表序号
-  let columnCustomKey = "D"; // 自定义Key列表序号
   let beginRowNum = +options.beginRowNum || 1; // 默认开始行号
   let endRowNum = +options.endRowNum || 10; // 默认结束行
 
@@ -40,14 +49,17 @@ function run(options) {
       }
     }
   });
+
   Object.keys(workbookMap).forEach((rowNum) => {
-    let customKey = workbookMap[rowNum][`${columnCustomKey}${rowNum}`]; // 自定义KEY
-    let zhCHSKey = customKey || `${columnKeyZhCHS}${rowNum}`;
-    let zhCHTKey = customKey || `${columnKeyZhCHT}${rowNum}`;
-    let enKey = customKey || `${columnKeyEn}${rowNum}`;
-    mode_i18n.i18n.zhCHS[zhCHSKey] = workbookMap[rowNum][zhCHSKey];
-    mode_i18n.i18n.zhCHT[zhCHTKey] = workbookMap[rowNum][zhCHTKey];
-    mode_i18n.i18n.en[enKey] = workbookMap[rowNum][enKey];
+    let customKey =  workbookMap[rowNum][`${columnCustomKey}${rowNum}`] || `KEY_${rowNum}`;
+    let zhCHSKey = `${columnKeyZhCHS}${rowNum}`;
+    let zhCHTKey = `${columnKeyZhCHT}${rowNum}`;
+    let enKey = `${columnKeyEn}${rowNum}`;
+
+    mode_i18n.i18n.zhCHS[customKey] = workbookMap[rowNum][zhCHSKey];
+    mode_i18n.i18n.zhCHT[customKey] = workbookMap[rowNum][zhCHTKey];
+    mode_i18n.i18n.en[customKey] = workbookMap[rowNum][enKey];
+
     mode_array.push([
       `${workbookMap[rowNum][zhCHSKey]}`,
       `${workbookMap[rowNum][zhCHTKey]}`,

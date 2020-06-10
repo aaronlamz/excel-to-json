@@ -4,15 +4,10 @@ const XLSX = require("xlsx");
 const fs = require("fs");
 const program = require("commander");
 const inquirer = require("inquirer");
-const http = require("http");
 const run = require("../index.js");
 const config = require('../package.json')
 const workbook = XLSX.readFile("./list.xlsx");
 const sheet_name_list = workbook.SheetNames;
-let beginRowNum = 1; // 默认开始行号
-let endRowNum = 10; // 默认结束行
-
-
 
 program.version(config.version).usage("<run>");
 program.arguments("<run>").action(function(cmd) {
@@ -38,6 +33,26 @@ program.arguments("<run>").action(function(cmd) {
       type: "input",
       name: "endRowNum",
       message: "请输入结束的行号(默认为10):"
+    },
+    {
+      type: "input",
+      name: "columnKeyZhCHT",
+      message: "请输入Excel表格繁体列序号(默认为A):"
+    },
+    {
+      type: "input",
+      name: "columnKeyEn",
+      message: "请输入Excel表格英文列的序号(默认为B):"
+    },
+    {
+      type: "input",
+      name: "columnKeyZhCHS",
+      message: "请输入Excel表格简体列的序号(默认为C):"
+    },
+    {
+      type: "input",
+      name: "columnCustomKey",
+      message: "请输入Excel表格自定义KEY的序号(默认为D):"
     }
   ];
   if (cmd === "run") {

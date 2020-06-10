@@ -1,6 +1,6 @@
 {
   "name": "parse-excel-cli",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A parse-excel-cli ",
   "main": "index.js",
   "bin": {
