@@ -1,28 +1,26 @@
-## parse-excel-cli
+<h1 align="center">Parse Excel CLI</h1>
+A easy excel parsing CLI
 
-A simple Excel parsing CLI
-
-### Features
-
-- parse Excel to JSON Data
+## Features
+### Excel to JSON
 
 ```javascript
 {
     "i18n": {
         "zhCHT": {
-        "KEY_1": "简体中文",
+          "KEY_1": "简体中文",
         },
         "zhCHS": {
-        "KEY_1": "英文",
+          "KEY_1": "英文",
         },
         "en": {
-        "KEY_1": "繁体中文",
+          "KEY_1": "繁体中文",
         }
     }
 }
 ```
 
-- parse Excel to Array Data
+### Excel to Array
 ```
 [
     [
@@ -33,7 +31,7 @@ A simple Excel parsing CLI
 ]
 ```
 
-### Installation
+## Installation
 
 Using npm:
 
@@ -41,8 +39,18 @@ Using npm:
 $ npm install -g parse-excel-cli
 ```
 
-### Usage
+Using yarn:
+
+```
+$ yarn global add parse-excel-cli
+```
+
+## Usage
 
 ```
 xcli run
 ```
+
+## License
+
+[MIT](https://en.wikipedia.org/wiki/MIT_License)
