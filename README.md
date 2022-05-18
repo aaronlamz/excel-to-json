@@ -1,4 +1,4 @@
-# excel-to-json
+# 🌈 excel-to-json
 
 Convert Excel files to JSON
 
