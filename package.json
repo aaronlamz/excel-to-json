@@ -1,7 +1,7 @@
 {
   "name": "parse-excel-cli",
   "version": "1.0.8",
-  "description": "A simple Excel parsing CLI",
+  "description": "A simple excel parsing CLI",
   "main": "index.js",
   "bin": {
     "xcli": "./bin/index.js"
