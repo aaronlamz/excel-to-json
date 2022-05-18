@@ -44,8 +44,6 @@ $ yarn global add excel-to-json
 etj --sourceFile="example.xlsx" --outputFile="example.json"
 ```
 
-## Examples
-
 ## License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
