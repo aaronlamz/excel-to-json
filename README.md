@@ -1,12 +1,8 @@
 ## parse-excel-cli
 
-> A simple Excel parsing CLI
+A simple Excel parsing CLI
 
-### Feature
-```
-Excel Form Data
-
-```
+### Features
 
 - parse Excel to JSON Data
 

@@ -1,7 +1,7 @@
 {
   "name": "parse-excel-cli",
   "version": "1.0.8",
-  "description": "A parse-excel-cli ",
+  "description": "A simple Excel parsing CLI",
   "main": "index.js",
   "bin": {
     "xcli": "./bin/index.js"
@@ -20,6 +20,6 @@
     "excel-parse-json",
     "node"
   ],
-  "author": "Aaron",
+  "author": "AaronLam",
   "license": "MIT"
 }
