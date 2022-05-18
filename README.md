@@ -1,4 +1,4 @@
-<h1 align="center">Excel to JSON</h1>
+<h1 align="center">excel-to-json</h1>
 Convert Excel files to JSON
 
 ## Status
