@@ -1,10 +1,10 @@
 {
-  "name": "parse-excel-cli",
+  "name": "excel-to-json",
   "version": "1.0.8",
-  "description": "A simple excel parsing CLI",
+  "description": "Convert Excel files to JSON",
   "main": "index.js",
   "bin": {
-    "xcli": "./bin/index.js"
+    "etj": "./bin/index.js"
   },
   "dependencies": {
     "commander": "^4.1.1",
@@ -17,7 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "excel-parse-json",
+    "excel-to-json",
     "node"
   ],
   "author": "AaronLam",

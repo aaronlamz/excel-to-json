@@ -1,5 +1,8 @@
-<h1 align="center">Parse Excel CLI</h1>
-A easy excel parsing CLI
+<h1 align="center">Excel to JSON</h1>
+Convert Excel files to JSON
+
+## Status
+Working in progress.
 
 ## Features
 ### Excel to JSON
@@ -20,36 +23,27 @@ A easy excel parsing CLI
 }
 ```
 
-### Excel to Array
-```
-[
-    [
-    "英文",
-    "简体中文",
-    "繁体中文"
-    ]
-]
-```
-
 ## Installation
 
 Using npm:
 
 ```
-$ npm install -g parse-excel-cli
+$ npm install -g excel-to-json
 ```
 
 Using yarn:
 
 ```
-$ yarn global add parse-excel-cli
+$ yarn global add excel-to-json
 ```
 
 ## Usage
 
 ```
-xcli run
+etj --sourceFile="example.xlsx" --outputFile="example.json"
 ```
+
+## Examples
 
 ## License
 
