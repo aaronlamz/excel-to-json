@@ -10,16 +10,14 @@ Working in progress.
 
 ```javascript
 {
-    "i18n": {
-        "zhCHT": {
+   "zh_CN": {
           "KEY_1": "简体中文",
         },
-        "zhCHS": {
-          "KEY_1": "英文",
-        },
-        "en": {
-          "KEY_1": "繁体中文",
-        }
+    "zh_HK": {
+      "KEY_1": "繁体中文",
+    },
+    "en": {
+      "KEY_1": "英文",
     }
 }
 ```

@@ -1,24 +1,31 @@
 {
   "name": "excel-to-json",
-  "version": "1.0.8",
+  "version": "1.0.0",
   "description": "Convert Excel files to JSON",
   "main": "index.js",
   "bin": {
     "etj": "./bin/index.js"
   },
   "dependencies": {
+    "chalk": "^5.0.1",
     "commander": "^4.1.1",
     "inquirer": "^7.1.0",
     "open": "^7.0.3",
     "xlsx": "^0.17.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "excel-to-json",
-    "node"
+    "excel",
+    "json",
+    "excel-to-json"
   ],
   "author": "AaronLam",
   "license": "MIT"
