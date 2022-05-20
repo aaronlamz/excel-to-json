@@ -14,13 +14,13 @@ Working in progress.
 ```javascript
 {
    "zh_CN": {
-        "key1": "简体中文",
+        "key": "简体中文",
     },
     "zh_HK": {
-        "key1": "繁体中文",
+        "key": "繁体中文",
     },
     "en": {
-        "key1": "英文",
+        "key": "英文",
     }
 }
 ```
