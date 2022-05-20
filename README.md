@@ -1,7 +1,5 @@
 # 🌈 excel-to-json
 
-Convert Excel to JSON
-
 ## Why need this?
 i18n messages is stored in Excel file, but it is not easy to edit in your code. So, this tool is created to convert Excel to JSON. 
 
