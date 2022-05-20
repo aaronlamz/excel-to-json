@@ -1,6 +1,6 @@
 # 🌈 excel-to-json
 
-Convert Excel files to JSON
+Convert Excel to JSON
 
 ## Status
 
