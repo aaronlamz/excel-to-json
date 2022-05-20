@@ -2,6 +2,9 @@
 
 Convert Excel to JSON
 
+## Why need this?
+i18n messages is stored in Excel file, but it is not easy to edit. So, this tool is created to convert Excel to JSON. 
+
 ## Status
 
 Working in progress.
@@ -11,13 +14,13 @@ Working in progress.
 ```javascript
 {
    "zh_CN": {
-        "KEY_1": "简体中文",
+        "key1": "简体中文",
     },
     "zh_HK": {
-        "KEY_1": "繁体中文",
+        "key1": "繁体中文",
     },
     "en": {
-        "KEY_1": "英文",
+        "key1": "英文",
     }
 }
 ```

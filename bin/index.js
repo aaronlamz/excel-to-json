@@ -26,12 +26,25 @@ program
                 },
                 {
                     type: 'input',
-                    name: 'clunmIndex',
+                    name: 'clunmKeyIndex',
                     message:
                         'Please input the column index as the key of the language (default: D)'
+                },
+                {
+                    type: 'input',
+                    name: 'beginRowNum',
+                    message: 'Please input the begin row number (default: 1)'
+                },
+                {
+                    type: 'input',
+                    name: 'endRowNum',
+                    message:
+                        'Please input the end row number (default: max number of rows with data)'
                 }
             ]
-            inquirer.prompt(questions).then(options => {})
+            inquirer.prompt(questions).then(options => {
+                console.log('options', options)
+            })
         }
     })
 
