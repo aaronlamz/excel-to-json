@@ -1,15 +1,15 @@
 {
   "name": "excel-to-json",
   "version": "1.0.0",
-  "description": "Convert Excel files to JSON",
+  "description": "Convert Excel to JSON",
   "main": "index.js",
   "bin": {
     "etj": "./bin/index.js"
   },
   "dependencies": {
     "chalk": "^5.0.1",
-    "commander": "^4.1.1",
-    "inquirer": "^7.1.0",
+    "commander": "^9.2.0",
+    "inquirer": "^8.2.4",
     "open": "^7.0.3",
     "xlsx": "^0.17.0"
   },
