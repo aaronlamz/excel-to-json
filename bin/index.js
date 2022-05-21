@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 const path = require('path')
 const XLSX = require('xlsx')
-const fs = require('fs')
+const nodeXlsx = require('node-xlsx')
+const { readFileSync } = require('fs')
 const { Command } = require('commander')
 const program = new Command()
 const inquirer = require('inquirer')
@@ -9,9 +10,11 @@ const run = require('../src/index.js')
 const { version } = require('../package.json')
 
 const go = arguments => {
-    const workbook = XLSX.readFile(arguments.sourceFile)
-    const sheetNames = workbook.SheetNames
+    const workbook = nodeXlsx.parse(arguments.sourceFile)
     console.log(workbook)
+    return
+    const sheetNames = workbook.SheetNames
+
     const questions = [
         {
             type: 'list',
@@ -39,8 +42,8 @@ const go = arguments => {
     ]
     inquirer.prompt(questions).then(options => {
         console.log('options', options)
-        // console.log(workbook)
-        console.log(workbook.Sheets)
+        console.log(workbook)
+        console.log(workbook.sheets)
     })
 }
 

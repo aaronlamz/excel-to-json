@@ -43,7 +43,7 @@ $ yarn global add excel-to-json
 etj --sourceFile="example.xlsx"
 ```
 ## TODO
-* Add UI for configuring the output options
+* Add UI for configuring the output file options
 
 ## License
 

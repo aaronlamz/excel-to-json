@@ -654,6 +654,13 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
+node-xlsx@^0.21.0:
+  version "0.21.0"
+  resolved "https://registry.npmjs.org/node-xlsx/-/node-xlsx-0.21.0.tgz#085d69869d7fa7ed1e6d2a13eee6aa6dce7867a1"
+  integrity sha512-MB+KcNCuRzwjgr17scpKiVTPd4Vbj3V+7QwKpqACGyJzhvC67xCQUbw2vYEIKtNfMfcLxgB2q2kEuRS8rmak9g==
+  dependencies:
+    xlsx "^0.17.4"
+
 once@^1.3.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
@@ -966,7 +973,7 @@ wrappy@1:
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
-xlsx@^0.17.0:
+xlsx@^0.17.0, xlsx@^0.17.4:
   version "0.17.5"
   resolved "https://registry.npmjs.org/xlsx/-/xlsx-0.17.5.tgz#78b788fcfc0773d126cdcd7ea069cb7527c1ce81"
   integrity sha512-lXNU0TuYsvElzvtI6O7WIVb9Zar1XYw7Xb3VAx2wn8N/n0whBYrCnHMxtFyIiUU1Wjf09WzmLALDfBO5PqTb1g==
