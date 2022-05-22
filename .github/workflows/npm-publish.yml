@@ -29,9 +29,7 @@ jobs:
         npm install
     - name: npm publish
       run: |
-        git config --local user.email "qylinxia@qq.com"
-        git config --local user.name "Aaronlamz"
-        git branch
+        git checkout dev
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
         git stash
         npm version patch
