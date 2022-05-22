@@ -2,81 +2,8 @@ const fs = require('fs')
 const path = require('path')
 const http = require('http')
 const utils = require('./utils')
-const XLSX = require('xlsx')
 
-function run(options) {
-    const workbook = XLSX.readFile('./list.xlsx')
-    const defaultMode = 'i18n'
-    const sheet_name_list = workbook.SheetNames
-    const workbookH5 = workbook.Sheets[sheet_name_list[options.column]]
-
-    let mode = options.mode || defaultMode
-    const mode_i18n = {
-        i18n: {
-            zhCHT: {},
-            zhCHS: {},
-            en: {}
-        }
-    }
-    const mode_array = []
-    console.log(options)
-    let columnKeyZhCHT = options.columnKeyZhCHT
-        ? options.columnKeyZhCHT.toUpperCase()
-        : 'A' // 默认繁体列表序号
-    let columnKeyEn = options.columnKeyEn
-        ? options.columnKeyEn.toUpperCase()
-        : 'B' // 默认繁体列表序号
-    let columnKeyZhCHS = options.columnKeyZhCHS
-        ? options.columnKeyZhCHS.toUpperCase()
-        : 'C' // 默认繁体列表序号
-    let columnCustomKey = options.columnCustomKey
-        ? options.columnCustomKey.toUpperCase()
-        : 'D' // 自定义Key列表序号
-
-    let beginRowNum = +options.beginRowNum || 1 // 默认开始行号
-    let endRowNum = +options.endRowNum || 10 // 默认结束行
-
-    let workbookMap = {}
-    Object.keys(workbookH5).forEach(key => {
-        if (key.indexOf('!') === -1) {
-            let rowNum = key.match(/\d+/) ? key.match(/\d+/)[0] : 0
-            if (rowNum < beginRowNum || rowNum > endRowNum) return
-            if (!workbookMap[rowNum]) {
-                workbookMap[rowNum] = {}
-                workbookMap[rowNum][key] = workbookH5[key].v
-            } else {
-                workbookMap[rowNum][key] = workbookH5[key].v
-            }
-        }
-    })
-
-    Object.keys(workbookMap).forEach(rowNum => {
-        let customKey =
-            workbookMap[rowNum][`${columnCustomKey}${rowNum}`] ||
-            `KEY_${rowNum}`
-        let zhCHSKey = `${columnKeyZhCHS}${rowNum}`
-        let zhCHTKey = `${columnKeyZhCHT}${rowNum}`
-        let enKey = `${columnKeyEn}${rowNum}`
-
-        mode_i18n.i18n.zhCHS[customKey] = workbookMap[rowNum][zhCHSKey]
-        mode_i18n.i18n.zhCHT[customKey] = workbookMap[rowNum][zhCHTKey]
-        mode_i18n.i18n.en[customKey] = workbookMap[rowNum][enKey]
-
-        mode_array.push([
-            `${workbookMap[rowNum][zhCHSKey]}`,
-            `${workbookMap[rowNum][zhCHTKey]}`,
-            `${workbookMap[rowNum][enKey]}`
-        ])
-    })
-
-    let result = null
-    if (mode === 'i18n') {
-        result = mode_i18n
-    } else {
-        result = mode_array
-    }
-    console.log(result)
-
+function open(result) {
     const port = 8881
     http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'text/plain;charset=utf-8' })
@@ -85,4 +12,4 @@ function run(options) {
     console.log(`Server running at http://localhost:${port}/`)
     utils.openBrowse(`http://localhost:${port}/`)
 }
-module.exports = run
+module.exports = open

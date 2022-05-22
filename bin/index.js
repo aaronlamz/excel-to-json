@@ -5,7 +5,7 @@ const { readFileSync } = require('fs')
 const { Command } = require('commander')
 const program = new Command()
 const inquirer = require('inquirer')
-const run = require('../src/index.js')
+const open = require('../src/index.js')
 const { version } = require('../package.json')
 
 const go = arguments => {
@@ -49,20 +49,39 @@ const packageData = (sheet, options) => {
     }
 
     const sheetDataList = sheet.data
-    // get language key index
-    const rowHead = sheetDataList[0]
-    const languages = rowHead.slice(1)
+    const firstRow = sheetDataList[0]
+    const languages = firstRow.slice(1)
     const defaultKey = 'key'
     const columnKey = options.clunmKey || 'zhCHS'
-    const defaultKeyIndex = rowHead.findIndex(item => item === defaultKey)
-    const columnKeyIndex = rowHead.findIndex(item => item === columnKey)
+    const defaultKeyIndex = firstRow.findIndex(item => item === defaultKey)
+    const columnKeyIndex = firstRow.findIndex(item => item === columnKey)
+
+    console.log('firstRow', firstRow)
+    console.log('columnKeyIndex', columnKeyIndex)
+    console.log('key is ', firstRow[columnKeyIndex])
+
     const beginRowNum = options.beginRowNum || 1
     const endRowNum = options.endRowNum || sheetDataList.length
-
     const jsonData = {}
+
     for (let i = beginRowNum; i <= endRowNum; i++) {
         const row = sheetDataList[i]
+        languages.forEach((language, index) => {
+            if (/^[a-z_A-Z]+$/g.test(language) && row && row.length) {
+                const languageIndex = index + 1
+                const key = row[defaultKeyIndex] || row[columnKeyIndex]
+                const value = row[languageIndex]
+                if (!jsonData[language]) {
+                    jsonData[language] = {}
+                }
+                if (key) {
+                    jsonData[language][key] = value
+                }
+            }
+        })
     }
+    console.log(jsonData)
+    open(jsonData)
 }
 
 program
