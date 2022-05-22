@@ -7,10 +7,10 @@ i18n messages is stored in Excel file, but it is not easy to edit in your code. 
 ## Features
 
 Excel data structure is converted to JSON.
-| Key | zh_CN | zh_HK | en |
-|:---|:---|:---|:---|
-| hello | 你好 | 你好 | hello |
-| world | 世界 | 世界 | world! |
+| Key | zh_CN | zh_HK | en | and more languages...
+|:---|:---|:---|:---|:---|
+| hello | 你好 | 你好 | hello | ... |
+| world | 世界 | 世界 | world! | ... |
 
 output JSON:
 
