@@ -11,7 +11,6 @@ Excel data structure is converted to JSON.
 | world | 世界 | 世界 | world! |
 
 output json:
-```
 
 ```json
 {
