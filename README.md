@@ -2,8 +2,6 @@
     <img src="logo.png" alt="logo" width="200"  />
 </p>
 
-<h1 align="center">excel-to-json</h1>
-
 ## Why need this?
 i18n messages is stored in Excel file, but it is not easy to edit in your code. So, this tool is created to convert Excel to JSON. 
 ## Features
