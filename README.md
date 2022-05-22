@@ -2,23 +2,30 @@
 
 ## Why need this?
 i18n messages is stored in Excel file, but it is not easy to edit in your code. So, this tool is created to convert Excel to JSON. 
-
-## Status
-
-Working in progress.
-
 ## Features
 
-```javascript
+Excel data structure is converted to JSON.
+| Key | zh_CN | zh_HK | en |
+|:---|:---|:---|:---|
+| hello | 你好 | 你好 | hello |
+| world | 世界 | 世界 | world! |
+
+output json:
+```
+
+```json
 {
    "zh_CN": {
-        "key": "简体中文",
+        "hello": "你好",
+        "world": "世界",
     },
     "zh_HK": {
-        "key": "繁体中文",
+        "hello": "你好",
+         "world": "世界",
     },
     "en": {
-        "key": "英文",
+        "hello": "hello",
+         "world": "world!",
     }
 }
 ```
@@ -44,6 +51,7 @@ etj --sourceFile="example.xlsx"
 ```
 ## TODO
 * Add UI for configuring the output file options
+* 无法解析在线文档导出的xlsx文件
 
 ## License
 
