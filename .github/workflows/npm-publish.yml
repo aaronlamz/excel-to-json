@@ -32,6 +32,8 @@ jobs:
         git config --global user.email "qylinxia@qq.com"
         git config --global user.name "Aaronlamz"
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+        git reset --hard
+        git pull
         git stash
         npm version patch
         git stash pop
