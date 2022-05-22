@@ -55,7 +55,7 @@ etj --sourceFile="example.xlsx"
 ```sh
 yarn example
 ```
-![example](./examples/example.png)
+<!-- ![example](./examples/example.png) -->
 
 ## Todo
 * Add UI for configuring the output file options
