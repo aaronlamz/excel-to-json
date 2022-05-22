@@ -10,7 +10,7 @@ Excel data structure is converted to JSON.
 | hello | 你好 | 你好 | hello |
 | world | 世界 | 世界 | world! |
 
-output json:
+output JSON:
 
 ```json
 {
