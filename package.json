@@ -6,13 +6,13 @@
   "bin": {
     "etj": "./bin/index.js"
   },
+
   "dependencies": {
     "chalk": "^5.0.1",
     "commander": "^9.2.0",
     "inquirer": "^8.2.4",
     "node-xlsx": "^0.21.0",
-    "open": "^7.0.3",
-    "xlsx": "^0.17.0"
+    "open": "^7.0.3"
   },
   "devDependencies": {
     "eslint": "^8.15.0",
@@ -21,6 +21,7 @@
     "prettier": "^2.6.2"
   },
   "scripts": {
+    "example": "yarn && node ./bin/index.js -s ./examples/SheetJSTable.xlsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

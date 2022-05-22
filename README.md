@@ -48,6 +48,13 @@ $ yarn global add excel-to-json
 ```sh
 etj --sourceFile="example.xlsx"
 ```
+## Examples
+
+```sh
+yarn example
+```
+![example](./examples/example.png)
+
 ## Todo
 * Add UI for configuring the output file options
 * 无法解析在线文档导出的xlsx文件
