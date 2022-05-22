@@ -48,7 +48,7 @@ $ yarn global add excel-to-json
 ```sh
 etj --sourceFile="example.xlsx"
 ```
-## TODO
+## Todo
 * Add UI for configuring the output file options
 * 无法解析在线文档导出的xlsx文件
 
