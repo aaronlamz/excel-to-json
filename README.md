@@ -2,6 +2,8 @@
     <img src="logo.png" alt="logo" width="200"  />
 </p>
 
+[![build](https://github.com/Aaronlamz/excel-to-json/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Aaronlamz/excel-to-json/actions/workflows/npm-publish.yml)
+
 ## Why need this?
 i18n messages is stored in Excel file, but it is not easy to edit in your code. So, this tool is created to convert Excel to JSON. 
 ## Features
