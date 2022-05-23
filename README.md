@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="logo.png" alt="logo" width="200"  />
+    <img src="https://github.com/Aaronlamz/excel-to-json/blob/dev/logo.png" alt="logo" width="200"  />
 </p>
 
 [![build](https://github.com/Aaronlamz/excel-to-json/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Aaronlamz/excel-to-json/actions/workflows/npm-publish.yml)
