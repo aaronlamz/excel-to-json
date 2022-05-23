@@ -38,13 +38,13 @@ output JSON:
 Using npm:
 
 ```sh
-$ npm install -g excel-to-json
+$ npm install -g excel-to-json-parser
 ```
 
 Using yarn:
 
 ```sh
-$ yarn global add excel-to-json
+$ yarn global add excel-to-json-parser
 ```
 
 ## Usage
