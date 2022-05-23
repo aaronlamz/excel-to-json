@@ -50,7 +50,9 @@ $ yarn global add excel-to-json-parser
 ## Usage
 
 ```sh
-etj --sourceFile="example.xlsx"
+etj --sourceFile example.xlsx
+// or
+etj -s example.xlsx
 ```
 ## Examples
 
