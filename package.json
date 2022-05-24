@@ -28,6 +28,18 @@
     "json",
     "excel-to-json"
   ],
-  "author": "AaronLam",
+  "author": {
+    "name": "Aaron Lam",
+    "email": "qylinxia@qq.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Aaronlamz/excel-to-json/issues"
+  },
+  "homepage": "https://github.com/Aaronlamz/excel-to-json#readme",
+  "files": [
+    "bin/*.js",
+    "src",
+    "README.md"
+  ],
   "license": "MIT"
 }
