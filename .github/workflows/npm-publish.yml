@@ -35,9 +35,7 @@ jobs:
         git reset --hard
         git checkout dev
         git pull
-        git stash
         npm version patch
-        git stash pop
         git push --follow-tags
         npm publish
       env:
