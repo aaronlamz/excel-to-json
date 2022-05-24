@@ -20,7 +20,7 @@
     "prettier": "^2.6.2"
   },
   "scripts": {
-    "example": "yarn && node ./bin/index.js -s ./examples/SheetJSTable.xlsx",
+    "example": "yarn && node ./bin/index.js -s ./examples/example.xlsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
