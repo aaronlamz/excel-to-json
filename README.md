@@ -50,9 +50,9 @@ $ yarn global add excel-to-json-parser
 ## Usage
 
 ```sh
-etj --sourceFile example.xlsx
+etj --sourceFile /yourdir/example.xlsx
 // or
-etj -s example.xlsx
+etj -s /yourDir/example.xlsx
 ```
 ## Examples
 
@@ -61,9 +61,8 @@ yarn example
 ```
 <!-- ![example](./examples/example.png) -->
 
-## Todo
+## TODO
 * Add UI for configuring the output file options
-* 无法解析在线文档导出的xlsx文件
 
 ## License
 
