@@ -33,6 +33,7 @@ jobs:
         git config --global user.name "Aaronlamz"
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
         git reset --hard
+        git checkout dev
         git pull
         git stash
         npm version patch
