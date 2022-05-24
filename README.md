@@ -61,9 +61,8 @@ yarn example
 ```
 <!-- ![example](./examples/example.png) -->
 
-## Todo
+## TODO
 * Add UI for configuring the output file options
-* 无法解析在线文档导出的xlsx文件
 
 ## License
 
