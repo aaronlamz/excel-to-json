@@ -86,13 +86,14 @@ const packageData = (sheet, options) => {
 
 program
     .version(version, '-V, --version')
-    .usage('[options]')
+    .usage('etj --sourceFile <dir>')
     .option('-s, --sourceFile <dir>', 'source file path need to be converted')
     .action(options => {
         if (options.sourceFile) {
             go(options)
         } else {
             console.log('Please input the source file path')
+            program.help()
         }
     })
 
