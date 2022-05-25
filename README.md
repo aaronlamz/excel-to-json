@@ -61,9 +61,6 @@ yarn example
 ```
 <!-- ![example](./examples/example.png) -->
 
-## TODO
-* Add UI for configuring the output file options
-
 ## License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
