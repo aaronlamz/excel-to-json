@@ -1,6 +1,6 @@
 {
   "name": "excel-to-json-parser",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert Excel to JSON",
   "main": "index.js",
   "bin": {
