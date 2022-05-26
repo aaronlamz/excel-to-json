@@ -61,7 +61,7 @@ etj -s /yourDir/example.xlsx
 ```sh
 yarn example
 ```
-<!-- ![example](./examples/example.png) -->
+![example](./examples/example.png)
 
 ## License
 
