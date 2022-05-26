@@ -17,32 +17,38 @@ const go = arguments => {
             name: 'sheetName',
             message: 'Please select the sheet you want to convert',
             choices: sheetNames
-        },
-        {
-            type: 'input',
-            name: 'clunmKey',
-            message:
-                'Please input the column key as the key of the language (default: zhCHS)'
-        },
-        {
-            type: 'input',
-            name: 'beginRowNum',
-            message: 'Please input the begin row number (default: 1)'
-        },
-        {
-            type: 'input',
-            name: 'endRowNum',
-            message:
-                'Please input the end row number (default: max number of rows with data)'
         }
     ]
     inquirer.prompt(questions).then(options => {
         const sheet = workbook.find(item => item.name === options.sheetName)
-        packageData(sheet, options)
+        const keys = Object.values(sheet.data[0])
+        const questionsNext = [
+            {
+                type: 'list',
+                name: 'clunmKey',
+                message:
+                    'Please select the clunmKey as the key of the language (default: column "key")',
+                choices: keys
+            },
+            {
+                type: 'input',
+                name: 'beginRowNum',
+                message: 'Please input the begin row number (default: 1)'
+            },
+            {
+                type: 'input',
+                name: 'endRowNum',
+                message:
+                    'Please input the end row number (default: max number of rows with data)'
+            }
+        ]
+        inquirer.prompt(questionsNext).then(optionsNext => {
+            packageJsonData(sheet, optionsNext)
+        })
     })
 }
 
-const packageData = (sheet, options) => {
+const packageJsonData = (sheet, options) => {
     if (sheet.data.length === 0) {
         console.log('sheet is empty')
         return
@@ -50,9 +56,9 @@ const packageData = (sheet, options) => {
 
     const sheetDataList = sheet.data
     const firstRow = sheetDataList[0]
-    const languages = firstRow.slice(1)
+    const languages = firstRow.slice(1) // default firstRow[0] is key
     const defaultKey = 'key'
-    const columnKey = options.clunmKey || 'zhCHS'
+    const columnKey = options.clunmKey || defaultKey
     const defaultKeyIndex = firstRow.findIndex(item => item === defaultKey)
     const columnKeyIndex = firstRow.findIndex(item => item === columnKey)
 
@@ -69,13 +75,13 @@ const packageData = (sheet, options) => {
         languages.forEach((language, index) => {
             if (/^[a-z_A-Z]+$/g.test(language) && row && row.length) {
                 const languageIndex = index + 1
-                const key = row[defaultKeyIndex] || row[columnKeyIndex]
+                const key = row[columnKeyIndex] || row[defaultKeyIndex]
                 const value = row[languageIndex]
                 if (!jsonData[language]) {
                     jsonData[language] = {}
                 }
                 if (key) {
-                    jsonData[language][key] = value
+                    jsonData[language][key] = value || key
                 }
             }
         })
