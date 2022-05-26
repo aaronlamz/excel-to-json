@@ -4,10 +4,10 @@
 
 [![build](https://github.com/Aaronlamz/excel-to-json/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Aaronlamz/excel-to-json/actions/workflows/npm-publish.yml)
 
-## Why need this?
+## 🙋‍♂️ Why need this?
 i18n messages is stored in Excel file, but it is not easy to edit in your code. So, this tool is created to convert Excel to JSON. 
 
-## Features
+## 📜 Features
 Excel data structure is converted to JSON.
 The key of the first column of the first row is required.
 
@@ -35,7 +35,7 @@ output JSON:
 }
 ```
 
-## Installation
+## 🌈 Installation
 
 Using npm:
 
@@ -49,7 +49,7 @@ Using yarn:
 $ yarn global add excel-to-json-parser
 ```
 
-## Usage
+## 🔥 Usage
 run etj --help without arguments to see list of options:
 ```sh
 Usage: etj --sourceFile <dir>
@@ -67,7 +67,7 @@ etj --sourceFile /yourdir/example.xlsx
 etj -s /yourDir/example.xlsx
 ```
 
-## Examples
+## 🔧 Examples
 ```sh
 yarn example
 ```
@@ -75,7 +75,7 @@ yarn example
 
 > ![example](https://raw.githubusercontent.com/Aaronlamz/excel-to-json/dev/examples/example.png)
 
-## License
+## ©️ License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
 
