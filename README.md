@@ -71,7 +71,7 @@ etj -s /yourDir/example.xlsx
 ```sh
 yarn example
 ```
-> ![excel](./examples/excel.png)
+> ![excel](https://raw.githubusercontent.com/Aaronlamz/excel-to-json/dev/examples/excel.png)
 
 > ![example](https://raw.githubusercontent.com/Aaronlamz/excel-to-json/dev/examples/example.png)
 
