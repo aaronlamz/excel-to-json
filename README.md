@@ -50,14 +50,24 @@ $ yarn global add excel-to-json-parser
 ```
 
 ## Usage
+run etj --help without arguments to see list of options:
+```sh
+Usage: etj --sourceFile <dir>
 
+Options:
+  -V, --version           output the version number
+  -s, --sourceFile <dir>  source file path need to be converted
+  -h, --help              display help for command
+```
+
+use CLI
 ```sh
 etj --sourceFile /yourdir/example.xlsx
 // or
 etj -s /yourDir/example.xlsx
 ```
-## Examples
 
+## Examples
 ```sh
 yarn example
 ```
