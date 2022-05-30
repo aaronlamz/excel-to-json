@@ -68,13 +68,10 @@ etj -s /yourDir/example.xlsx
 ```
 
 ## 🔧 Examples
+run example
 ```sh
 yarn example
 ```
-> ![excel](https://raw.githubusercontent.com/Aaronlamz/excel-to-json/dev/examples/excel.png)
-
-> ![example](https://raw.githubusercontent.com/Aaronlamz/excel-to-json/dev/examples/example.png)
-
 ## ©️ License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
