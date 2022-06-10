@@ -88,7 +88,7 @@ const packageJsonData = (sheet, options) => {
             }
         })
     }
-    console.log(jsonData)
+    console.log('jsonData:', jsonData)
     open(jsonData)
 }
 
