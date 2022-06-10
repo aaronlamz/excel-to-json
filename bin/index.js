@@ -67,8 +67,10 @@ const packageJsonData = (sheet, options) => {
     console.log('key is ', firstRow[columnKeyIndex])
 
     const beginRowNum = options.beginRowNum || 1
-    const endRowNum = options.endRowNum || sheetDataList.length
+    let endRowNum = options.endRowNum || sheetDataList.length
     const jsonData = {}
+    endRowNum =
+        endRowNum > sheetDataList.length ? sheetDataList.length : endRowNum
 
     for (let i = beginRowNum; i <= endRowNum; i++) {
         const row = sheetDataList[i]
@@ -81,7 +83,7 @@ const packageJsonData = (sheet, options) => {
                     jsonData[language] = {}
                 }
                 if (key) {
-                    jsonData[language][key] = value || key
+                    jsonData[language][key] = value || ''
                 }
             }
         })
