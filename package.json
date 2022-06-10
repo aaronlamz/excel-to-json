@@ -1,25 +1,45 @@
 {
-  "name": "parse-excel-cli",
+  "name": "excel-to-json-parser",
   "version": "1.0.8",
-  "description": "A simple excel parsing CLI",
+  "description": "Convert Excel to JSON",
   "main": "index.js",
   "bin": {
-    "xcli": "./bin/index.js"
+    "etj": "./bin/index.js"
   },
   "dependencies": {
-    "commander": "^4.1.1",
-    "inquirer": "^7.1.0",
-    "open": "^7.0.3",
-    "xlsx": "^0.17.0"
+    "chalk": "^5.0.1",
+    "commander": "^9.2.0",
+    "inquirer": "^8.2.4",
+    "node-xlsx": "^0.21.0",
+    "open": "^7.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  },
   "scripts": {
+    "example": "yarn && node ./bin/index.js -s ./examples/example.xlsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "excel-parse-json",
-    "node"
+    "excel",
+    "json",
+    "excel-to-json"
   ],
-  "author": "AaronLam",
+  "author": {
+    "name": "Aaron Lam",
+    "email": "qylinxia@qq.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Aaronlamz/excel-to-json/issues"
+  },
+  "homepage": "https://github.com/Aaronlamz/excel-to-json#readme",
+  "files": [
+    "bin/*.js",
+    "src",
+    "README.md"
+  ],
   "license": "MIT"
 }
