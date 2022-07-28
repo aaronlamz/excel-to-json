@@ -30,10 +30,10 @@ jobs:
     - name: npm publish
       run: |
         git config --global user.email "qylinxia@qq.com"
-        git config --global user.name "Aaronlamz"
+        git config --global user.name "aaronlamz"
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
         git reset --hard
-        git checkout dev
+        git checkout main
         git pull
         npm version patch
         git push --follow-tags
