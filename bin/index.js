@@ -56,11 +56,12 @@ const packageJsonData = (sheet, options) => {
 
     const sheetDataList = sheet.data
     const firstRow = sheetDataList[0]
-    const columnKey = options.clunmKey || defaultKey
-    const sliceIndex = firstRow.findIndex(key => key === columnKey)
-    const languages = firstRow.slice(sliceIndex + 1) // depends on key name
     const defaultKey = 'key'
-    const defaultKeyIndex = firstRow.findIndex(item => item === defaultKey)
+    const columnKey = options.clunmKey || defaultKey
+    const defaultKeyIndex =
+        firstRow.findIndex(item => item && item.toLowerCase() === defaultKey) ||
+        0
+    const languages = firstRow.slice(defaultKeyIndex + 1) // depends on key name
     const columnKeyIndex = firstRow.findIndex(item => item === columnKey)
 
     console.log('firstRow', firstRow)
@@ -76,9 +77,9 @@ const packageJsonData = (sheet, options) => {
     for (let i = beginRowNum; i <= endRowNum; i++) {
         const row = sheetDataList[i]
         languages.forEach((language, index) => {
-            language = language.replace(/[^A-Z_a-z]+/, '') // Replace non-English characters
+            language = language.replace(/[^A-Z_a-z]+/g, '') // Replace non-English characters
             if (/[a-z_A-Z]|[a-zA-Z]+$/g.test(language) && row && row.length) {
-                const languageIndex = index + 1
+                const languageIndex = index + defaultKeyIndex + 1
                 const key = row[columnKeyIndex] || row[defaultKeyIndex]
                 const value = row[languageIndex]
                 if (!jsonData[language]) {
