@@ -11,7 +11,7 @@ i18n messages is stored in Excel file, but it is not easy to edit in your code. 
 Excel data structure is converted to JSON.
 The key of the first column of the first row is required.
 
-| Key | zh_CN | zh_HK | en | and more languages...
+| key | zh_CN | zh_HK | en | and more languages...
 |:---|:---|:---|:---|:---|
 | hello | 你好 | 你好 | hello | ... |
 | world | 世界 | 世界 | world! | ... |
