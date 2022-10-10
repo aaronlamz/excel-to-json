@@ -27,7 +27,7 @@ const go = arguments => {
                 type: 'list',
                 name: 'clunmKey',
                 message:
-                    'Please select the clunmKey as the key of the language (default: column "key")',
+                    'Please select the clunmKey as the key of the language (default: first column key)',
                 choices: keys
             },
             {
@@ -58,9 +58,7 @@ const packageJsonData = (sheet, options) => {
     const firstRow = sheetDataList[0]
     const defaultKey = 'key'
     const columnKey = options.clunmKey || defaultKey
-    const defaultKeyIndex =
-        firstRow.findIndex(item => item && item.toLowerCase() === defaultKey) ||
-        0
+    const defaultKeyIndex = firstRow.findIndex(key => key === columnKey) || 0
     const languages = firstRow.slice(defaultKeyIndex + 1) // depends on key name
     const columnKeyIndex = firstRow.findIndex(item => item === columnKey)
 
